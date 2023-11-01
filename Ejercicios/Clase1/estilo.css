@@ -4,7 +4,7 @@
 }
 
 .header {
-    background-color: #007BFF;
+    background-color: tomato;
     height: 10vh;
     margin-bottom: 20px;
     font-family: Arial, sans-serif;
@@ -52,7 +52,7 @@ input:focus, select:focus {
 }
   
 button {
-    background-color: #007BFF;
+    background-color: rgb(93, 141, 10);
     color: #fff;    
     padding: 10px 20px;
     cursor: pointer;
