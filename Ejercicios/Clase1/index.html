@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./estilo.css">
+    <title>Clase 1: Formulario de contacto</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Seguro No Pagamos Cooperativa</h1>
+    </div>
+    <div class="tituloForm">
+        <h2>Formulario de contacto</h2>
+    </div>
+    <div class="form">
+        <form action="" method="GET">
+            Nombre: <input type="text" name="Nombre" id="name">        
+            Apellido: <input type="text" name="Apellido" id="lastname">
+            DNI: <input type="text" name="dni" id="dni">
+            Email: <input type="email" name="email" id="email">
+            Teléfono: <input type="tel" name="tel" id="tel">
+            Tipo de Seguro:
+            <select name="tipodeseguro" id="tiposeguro">
+                <option value="basico" selected>Básico</option>
+                <option value="intermedio">Intermedio</option>
+                <option value="premium">Premium</option>
+            </select>
+            <div class="mostrarPrecio"></div>
+            <div class="botonesForm">
+                <button type="reset" class="rojo">Borrar</button>
+                <button type="submit">Enviar</button>
+            </div>            
+        </form>
+    </div>    
+    <script src="./script.js"></script>
+</body>
+</html>
