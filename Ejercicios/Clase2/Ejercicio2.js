@@ -10,7 +10,7 @@ const resetButton = document.querySelector('#reset');
 resetButton.addEventListener('click', () => {
     num1.value = '';
     num2.value = '';
-    resultado.textContent = '';
+    resultado.textContent = '0';
 });
 
 
