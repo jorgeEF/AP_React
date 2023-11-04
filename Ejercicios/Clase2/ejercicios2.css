@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.calculator {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+button {
+    width: 48%;
+    padding: 10px;
+    margin: 5px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#reset {
+    background-color: red;
+}
+
+#sumar {
+    background-color: green;
+}
+
+#restar {
+    background-color: lightseagreen;
+}
+
+#multiplicar {
+    background-color: orange;
+}
+
+#dividir {
+    background-color:darkviolet
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#resultado {
+    text-align: left;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.operaciones {
+    display: flex;
+}
