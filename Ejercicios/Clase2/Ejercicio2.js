@@ -13,29 +13,46 @@ resetButton.addEventListener('click', () => {
     resultado.textContent = '0';
 });
 
-
-btnSumar.addEventListener('click', () => {
+function checkInputs() {
     const a = parseFloat(num1.value);
     const b = parseFloat(num2.value);
-    Sumar(a, b, MostrarResultado);
+    if (isNaN(a) || isNaN(b)) {
+        resultado.textContent = 'Por favor, ingresá números válidos en los campos de operandos.';
+        return false;
+    }
+    return true;
+}
+
+btnSumar.addEventListener('click', () => {
+    if (checkInputs()) {
+        const a = parseFloat(num1.value);
+        const b = parseFloat(num2.value);
+        Sumar(a, b, MostrarResultado);
+    }
 });
 
 btnRestar.addEventListener('click', () => {
-    const a = parseFloat(num1.value);
-    const b = parseFloat(num2.value);
-    Restar(a, b, MostrarResultado);
+    if (checkInputs()) {
+        const a = parseFloat(num1.value);
+        const b = parseFloat(num2.value);
+        Restar(a, b, MostrarResultado);
+    }
 });
 
 btnMultiplicar.addEventListener('click', () => {
-    const a = parseFloat(num1.value);
-    const b = parseFloat(num2.value);
-    Multiplicar(a, b, MostrarResultado);
+    if (checkInputs()) {
+        const a = parseFloat(num1.value);
+        const b = parseFloat(num2.value);
+        Multiplicar(a, b, MostrarResultado);
+    }
 });
 
 btnDividir.addEventListener('click', () => {
-    const a = parseFloat(num1.value);
-    const b = parseFloat(num2.value);
-    Dividir(a, b, MostrarResultado);
+    if (checkInputs()) {
+        const a = parseFloat(num1.value);
+        const b = parseFloat(num2.value);
+        Dividir(a, b, MostrarResultado);
+    }
 });
 
 function MostrarResultado(operacion, c) {
