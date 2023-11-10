@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import "./Section.css"
 import { Box, Text, Button } from '@chakra-ui/react'
 
 function Section() {
