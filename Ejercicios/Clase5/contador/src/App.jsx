@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { ContadorResponsive } from './Components/ContadorResponsive/ContadorResponsive'
 import { ChakraProvider } from '@chakra-ui/react'
 
