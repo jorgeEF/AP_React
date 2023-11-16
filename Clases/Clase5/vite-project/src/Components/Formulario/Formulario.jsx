@@ -10,19 +10,33 @@ export const Formulario = () => {
     const [mostrar,setMostrar] = useState(false);
     const [mostrarPassword,setMostrarPassword] = useState(false);
 
+    //clase 6
+    const [nombreValido,setNombreValido] = useState(false);
+    const [emailValido,setEmailValido] = useState(false);
+    const [direccionValida,setDireccionValida] = useState(false);
+
+
+    //nombreValido ? console.log("Valido") : console.log("No valido");
+
+
     function actualizarNombre(e){
-        e.preventDefault();
-        setNombre(e.target.value);
+        //console.log("estoy en actualizar nombre")        
+        setNombreValido(e.target.value.length>3);
+        //console.log("nombre valido? " + nombreValido)
+        nombreValido ? setNombre(e.target.value) : setNombre("");
     }
 
-    function actualizarEmail(e){
-        e.preventDefault();
-        setEmail(e.target.value);
+    function actualizarEmail(e){        
+        // expresiones regulares (regex)
+        let emailChar = /^\S+[a-zA-Z]+@+\S+\.\S+$/;
+        //console.log("el email es valido? ", emailChar.test(e.target.value));
+        setEmailValido(emailChar.test(e.target.value))
+        emailValido ? setEmail(e.target.value) : setEmail("");        
     }
 
-    function actualizarDireccion(e){
-        e.preventDefault();
-        setDireccion(e.target.value);
+    function actualizarDireccion(e){        
+        setDireccionValida(e.target.value.length>3);
+        direccionValida ? setDireccion(e.target.value) : setDireccion("");
     }
 
     function enviarDatos(e){
@@ -31,9 +45,9 @@ export const Formulario = () => {
     }
 
     function mostrarPass(e){   
-        e.preventDefault();          
+        e.preventDefault();      
         setMostrarPassword(!mostrarPassword);
-    }
+    }    
 
     return(
         <div>
@@ -42,19 +56,19 @@ export const Formulario = () => {
                     <form action="">
                         <div className="form-group">
                             <label htmlFor="">Nombre</label>
-                            <input type="text" name="" id="" value={nombre} onChange={ actualizarNombre }/>
+                            <input type="text" name="" id="nombre" onChange={ actualizarNombre }/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="">Email</label>
-                            <input type="email" name="" id="" onChange={ actualizarEmail }/>
+                            <input type="email" name="" id="email" onChange={ actualizarEmail }/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="">Direccion</label>
-                            <input type="text" name="" id="" onChange={ actualizarDireccion }/>
+                            <input type="text" name="" id="direccion" onChange={ actualizarDireccion }/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="">Contraseña</label>
-                            <input type={mostrarPassword ? "text":"password"} name="" id="" /> 
+                            <input type={mostrarPassword ? "text":"password"} name="" id="password" /> 
                             <button className="btn btn-primary btn-sm ms-1" onClick={mostrarPass}>{mostrarPassword ? "Ocultar contraseña":"Mostrar contraseña"}</button>
                         </div>
                         <button type="submit" onClick={enviarDatos}>Enviar</button>
