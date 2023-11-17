@@ -14,22 +14,20 @@ export const Formulario = () => {
     const [nombreValido,setNombreValido] = useState(false);
     const [emailValido,setEmailValido] = useState(false);
     const [direccionValida,setDireccionValida] = useState(false);
+    const [mostrarErrores,setMostrarErrores] = useState(false);
 
 
     //nombreValido ? console.log("Valido") : console.log("No valido");
 
 
-    function actualizarNombre(e){
-        //console.log("estoy en actualizar nombre")        
-        setNombreValido(e.target.value.length>3);
-        //console.log("nombre valido? " + nombreValido)
+    function actualizarNombre(e){               
+        setNombreValido(e.target.value.length>3);        
         nombreValido ? setNombre(e.target.value) : setNombre("");
     }
 
     function actualizarEmail(e){        
         // expresiones regulares (regex)
-        let emailChar = /^\S+[a-zA-Z]+@+\S+\.\S+$/;
-        //console.log("el email es valido? ", emailChar.test(e.target.value));
+        let emailChar = /^\S+[a-zA-Z]+@+\S+\.\S+$/;        
         setEmailValido(emailChar.test(e.target.value))
         emailValido ? setEmail(e.target.value) : setEmail("");        
     }
@@ -40,34 +38,42 @@ export const Formulario = () => {
     }
 
     function enviarDatos(e){
-        e.preventDefault();     
+        e.preventDefault();
         setMostrar(true);
+        if(!nombreValido || !emailValido || !direccionValida){
+            setMostrarErrores(true)
+        }
     }
 
-    function mostrarPass(e){   
+    function mostrarPass(e){
         e.preventDefault();      
         setMostrarPassword(!mostrarPassword);
-    }    
+    }
+
+    
 
     return(
         <div>
             <div className="row my-5 justify-content-md-center">
                 <div className="col-md-12">
-                    <form action="">
+                    <form>
                         <div className="form-group">
-                            <label htmlFor="">Nombre</label>
+                            <label htmlFor="nombre">Nombre</label>
                             <input type="text" name="" id="nombre" onChange={ actualizarNombre }/>
+                            {(!nombreValido && mostrarErrores )&& <small className="text-danger">Nombre no valido</small>}
                         </div>
                         <div className="form-group">
-                            <label htmlFor="">Email</label>
+                            <label htmlFor="email">Email</label>
                             <input type="email" name="" id="email" onChange={ actualizarEmail }/>
+                            {(!emailValido && mostrarErrores )&& <small className="text-danger">Email no valido</small>}
                         </div>
                         <div className="form-group">
-                            <label htmlFor="">Direccion</label>
+                            <label htmlFor="direccion">Direccion</label>
                             <input type="text" name="" id="direccion" onChange={ actualizarDireccion }/>
+                            {(!direccionValida && mostrarErrores )&& <small className="text-danger">Dirección no valida</small>}
                         </div>
                         <div className="form-group">
-                            <label htmlFor="">Contraseña</label>
+                            <label htmlFor="password">Contraseña</label>
                             <input type={mostrarPassword ? "text":"password"} name="" id="password" /> 
                             <button className="btn btn-primary btn-sm ms-1" onClick={mostrarPass}>{mostrarPassword ? "Ocultar contraseña":"Mostrar contraseña"}</button>
                         </div>
