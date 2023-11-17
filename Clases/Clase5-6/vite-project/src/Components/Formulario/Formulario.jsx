@@ -56,6 +56,7 @@ export const Formulario = () => {
         <div>
             <div className="row my-5 justify-content-md-center">
                 <div className="col-md-12">
+                    <h1>Formulario react</h1>
                     <form>
                         <div className="form-group">
                             <label htmlFor="nombre">Nombre</label>
