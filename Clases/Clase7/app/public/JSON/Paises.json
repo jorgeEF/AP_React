@@ -1,0 +1,102 @@
+[
+    {
+      "id": 1,
+      "nombre": "Argentina",
+      "colores_bandera": "celeste y blanco"
+    },
+    {
+      "id": 2,
+      "nombre": "Brasil",
+      "colores_bandera": "verde y amarillo"
+    },
+    {
+      "id": 3,
+      "nombre": "Colombia",
+      "colores_bandera": "amarillo, azul y rojo"
+    },
+    {
+      "id": 4,
+      "nombre": "Chile",
+      "colores_bandera": "azul, blanco y rojo"
+    },
+    {
+      "id": 5,
+      "nombre": "Perú",
+      "colores_bandera": "rojo y blanco"
+    },
+    {
+      "id": 6,
+      "nombre": "Venezuela",
+      "colores_bandera": "amarillo, azul y rojo"
+    },
+    {
+      "id": 7,
+      "nombre": "México",
+      "colores_bandera": "verde, blanco y rojo"
+    },
+    {
+      "id": 8,
+      "nombre": "Estados Unidos",
+      "colores_bandera": "azul, blanco y rojo"
+    },
+    {
+      "id": 9,
+      "nombre": "Canadá",
+      "colores_bandera": "rojo, blanco y rojo"
+    },
+    {
+      "id": 10,
+      "nombre": "Cuba",
+      "colores_bandera": "rojo, azul y blanco"
+    },
+    {
+      "id": 11,
+      "nombre": "Jamaica",
+      "colores_bandera": "amarillo, verde y negro"
+    },
+    {
+      "id": 12,
+      "nombre": "Haití",
+      "colores_bandera": "azul, rojo y negro"
+    },
+    {
+      "id": 13,
+      "nombre": "Guatemala",
+      "colores_bandera": "azul, blanco y rojo"
+    },
+    {
+      "id": 14,
+      "nombre": "Honduras",
+      "colores_bandera": "azul, blanco y azul"
+    },
+    {
+      "id": 15,
+      "nombre": "Nicaragua",
+      "colores_bandera": "azul, blanco y azul"
+    },
+    {
+      "id": 16,
+      "nombre": "Costa Rica",
+      "colores_bandera": "azul, blanco y rojo"
+    },
+    {
+      "id": 17,
+      "nombre": "Panama",
+      "colores_bandera": "azul, blanco y rojo"
+    },
+    {
+      "id": 18,
+      "nombre": "Ecuador",
+      "colores_bandera": "amarillo, azul y rojo"
+    },
+    {
+      "id": 19,
+      "nombre": "Bolivia",
+      "colores_bandera": "rojo, amarillo y verde"
+    },
+    {
+      "id": 20,
+      "nombre": "Paraguay",
+      "colores_bandera": "azul, blanco y rojo"
+    }
+  ]
