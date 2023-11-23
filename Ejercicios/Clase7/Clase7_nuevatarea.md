@@ -1,4 +1,5 @@
 # Galería de Imágenes con Chakra UI
+
 Objetivo:
 Desarrollar una aplicación de galería de imágenes que permita a los usuarios buscar y ver imágenes utilizando la API de Unsplash. Utilizar Chakra UI para diseñar la interfaz de usuario y aplicar los hooks useState y useEffect para gestionar el estado y las peticiones a la API.
 
