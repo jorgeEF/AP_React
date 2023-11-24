@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Galería de Imágenes con Chakra UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Objetivo:
+Desarrollar una aplicación de galería de imágenes que permita a los usuarios buscar y ver imágenes utilizando la API de Unsplash. Utilizar Chakra UI para diseñar la interfaz de usuario y aplicar los hooks useState y useEffect para gestionar el estado y las peticiones a la API.
 
-## Available Scripts
+Requisitos:
+Creación de la Aplicación:
 
-In the project directory, you can run:
+Inicia un nuevo proyecto de React utilizando create-react-app.
+Instala Chakra UI en el proyecto.
+Diseño de la Interfaz de Usuario:
 
-### `npm start`
+Utiliza Chakra UI para diseñar una interfaz de usuario moderna y atractiva.
+La interfaz debe incluir:
+Un campo de búsqueda para que los usuarios ingresen términos de búsqueda.
+Un botón de búsqueda para realizar la búsqueda de imágenes.
+Sección para mostrar las imágenes resultantes de la búsqueda.
+Integración con API de Unsplash:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Utiliza la API de Unsplash para obtener imágenes basadas en términos de búsqueda. Puedes obtener una clave de acceso gratuita registrándote en https://unsplash.com/developers.
+Utiliza el hook useState para gestionar el estado de la aplicación, incluyendo los resultados de la búsqueda y el término de búsqueda actual.
+Utiliza el hook useEffect para realizar la solicitud a la API cuando el componente se monta o cuando cambia el término de búsqueda.
+Responsividad:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Asegúrate de que la aplicación sea completamente responsiva.
+Utiliza las utilidades proporcionadas por Chakra UI para mejorar la experiencia en dispositivos móviles y pantallas más grandes.
+Estilo Personalizado:
 
-### `npm test`
+Personaliza el estilo de la aplicación utilizando temas y estilos proporcionados por Chakra UI.
+Funcionalidades Adicionales:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Implementa la funcionalidad de paginación para mostrar más resultados de búsqueda.
+Añade un botón para cargar más imágenes sin recargar la página.
+Funcionalidades Adicionales:
+Implementa la funcionalidad de  animacion con FRAMER MOTION

@@ -2,6 +2,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Galeria } from './Components/Galeria/Galeria';
+import './App.css'
 
 const App = () => {  
 
