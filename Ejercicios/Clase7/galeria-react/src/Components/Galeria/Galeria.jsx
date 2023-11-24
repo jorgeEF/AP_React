@@ -8,7 +8,7 @@ export const Galeria = () => {
   const [page, setPage] = useState(1);
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const accessKey = process.env.REACT_APP_UNSPLASH_ACCESS_KEY;
+  const accessKey = import.meta.env.VITE_UNSPLASH_ACCESS_KEY;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,7 +19,7 @@ export const Galeria = () => {
         const data = await response.json();
         setImages((prevImages) => [...prevImages, ...data]);
       } catch (error) {
-        console.error('Error obteniendo :', error);
+        console.error('Error obteniendo imagenes:', error);
       }
     };
 
