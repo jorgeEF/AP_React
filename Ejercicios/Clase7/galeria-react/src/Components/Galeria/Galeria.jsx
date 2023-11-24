@@ -1,4 +1,4 @@
-import { Button, Box, Text, VStack, Grid, Modal, ModalOverlay, ModalContent, ModalBody, Image } from '@chakra-ui/react';
+import { Button, Box, Text, VStack, HStack, Grid, Modal, ModalOverlay, ModalContent, ModalBody, Image } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
@@ -17,9 +17,9 @@ export const Galeria = () => {
           `https://api.unsplash.com/photos/?page=${page}&query=${searchTerm}&client_id=${accessKey}`
         );
         const data = await response.json();
-        setImages((prevImages) => [...prevImages, ...data]);
+        setImages(data);
       } catch (error) {
-        console.error('Error obteniendo imagenes:', error);
+        console.error('Error fetching data:', error);
       }
     };
 
@@ -30,12 +30,13 @@ export const Galeria = () => {
     setPage(1);
   };
 
-  const handleScroll = () => {
-    if (
-      window.innerHeight + document.documentElement.scrollTop ===
-      document.documentElement.offsetHeight
-    ) {
-      setPage((prevPage) => prevPage + 1);
+  const handleNextPage = () => {
+    setPage((prevPage) => prevPage + 1);
+  };
+
+  const handlePrevPage = () => {
+    if (page > 1) {
+      setPage((prevPage) => prevPage - 1);
     }
   };
 
@@ -45,14 +46,7 @@ export const Galeria = () => {
 
   const handleCloseModal = () => {
     setSelectedImage(null);
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  };  
 
   return (
     <Box>
@@ -63,7 +57,13 @@ export const Galeria = () => {
         transition={{ duration: 0.5 }}
       >
         <VStack spacing={4} align="center">          
-          <Text fontSize='2xl'>Galería Infinita</Text>
+          <Text fontSize='2xl'>Galería usplash</Text>
+          <HStack>
+            <Button onClick={handlePrevPage} disabled={page === 1}>
+              Anterior
+            </Button>
+            <Button onClick={handleNextPage}>Siguiente</Button>
+          </HStack>
           <Grid templateColumns="repeat(4, 1fr)" gap={4} autoRows="200px">
             {images.map((image) => (
               <motion.img
